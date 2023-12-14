@@ -1,0 +1,294 @@
+@import "lib/vars"
+@import "lib/type"
+
+
+
+//scroll
+::-webkit-scrollbar
+    width: 12px
+    height: 9px
+
+::-webkit-scrollbar-thumb
+    background-color: $negro
+
+//logo y nav
+
+.header
+    display: flex
+    justify-content: space-between
+
+
+.logo
+    margin-left: 30px
+    height: 80px
+
+.menu
+    list-style: none
+    margin-right: 10px
+    display: flex
+
+.menu_item
+        margin-right: 20px
+        margin-left: 2px
+        cursor: pointer
+
+//galería
+.carusell
+    margin-top: 110px
+    margin-bottom: 110px
+
+#caja
+    height: 550px
+    width: auto
+    display: block
+    margin: 0px auto
+    margin-top: 5px
+    border: solid 
+    border-radius: 30px
+    
+
+.mini
+    width: 20px
+    height: 20px
+    margin: 5px
+    border-block-color: $negro
+
+.caja_mini
+    display: flex
+    justify-content: center
+    margin: 20px
+    margin-left: 45px
+    margin-right: 45px
+.controler 
+    display: flex
+    justify-content: center
+    align-items: center
+    
+
+.mini_style
+    border: 1px solid #000000
+
+//botones galería
+
+#izquierda
+    margin-right: 200px
+    border: solid thin
+    border-radius: 50px
+    background-color: none
+
+#derecha
+    margin-left: 200px
+    border: solid thin  
+    border-radius: 50px
+    background-color: none
+
+//main 
+.contenedor
+    margin-top: 40px
+    display: grid
+    grid-template-columns: 30% 70%
+    grid-template-row: auto
+    grid-template-areas: "textfze galeriaMain"
+    gap: 20px
+    .textfze
+        margin-top: 500px
+        margin-left: 30%
+        height: 30px
+        width: 200px
+        grid-area: textfze
+        display: flex
+        justify-content: flex-start
+        .text1
+            text-align: justify
+            line-height: 0,5
+            margin-top: 200px
+            font-size: 0.9em
+    .galeriaMain
+        grid-area: galeriaMain
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        .galeria
+            width:100% 
+            display: flex
+            flex-wrap: wrap
+            justify-content: flex-start
+            .tarjeta
+                width: calc( 30% - 20px )
+                margin: 20px
+            .imags
+                width: 100%
+                height: auto
+
+//cesta de la compra
+
+.carro_btn
+    position: fixed
+    display: flex
+    justify-content: flex-start 
+    width: 550px
+    height: 40px
+    border: solid thin
+    background-color: $blanco
+    bottom: 0
+    left: 20px
+    .carro
+        display: flex
+        margin-top: 15px
+        margin-left: 5px
+        width: 40px
+    .count
+        margin-top: 10px
+        margin-left: 480px
+        display: flex
+        justify-content: flex-end
+
+.carro_lista    
+    display: none
+    position: fixed
+    z-index: 10
+    width: 550px
+    height: 100vh
+    border: solid thin
+    background-color: $blanco
+    bottom: 0
+    left: 20px
+    .item_close
+        display: flex
+        justify-content: space-between
+    .carro
+        display: flex
+        margin-top: 15px
+        margin-left: 5px
+        width: 40px
+    .count
+        margin-top: 10px
+        margin-left: 480px
+        display: flex
+        justify-content: flex-end
+    .compra
+        display: flex
+        justify-content: space-between
+        padding: 20px 
+        border-bottom: solid thin  
+    &.opened
+        display: block
+
+//card detalle producto
+
+.detalle_card
+    position: fixed
+    z-index: 40
+    width: 1090px
+    height: 800px
+    border: solid thin
+    background-color: $blanco
+    top: 0
+    left: 0
+    display: flex
+    justify-content: flex-start
+    visibility: hidden
+    .img_detalle
+        width: 800px
+        height: 800px
+        border-right: solid thin
+    .info
+        margin-left: 10px
+        display: grid
+        grid-template-column: repeat(2, 1fr)
+        grid-template-rows: repeat(3, 1fr)  
+        padding: 10px
+        .nombre_producto
+            grid-area: 1 / 1 / 2 / 2
+            align-self: start
+        .serie
+            grid-area: 1 / 2 / 2 / 3
+            margin-top: 10px
+            justify-content: left 
+            align-self: start
+            justify-self: end
+        .desc_prod
+            grid-area: 2 / 1 / 3 / 3
+            text-align: justify
+            line-height: 0,5
+            font-size: 0.9em
+            align-self: start
+            margin-bottom: 80px
+        .price
+            grid-area: 3 / 1 / 4 / 2
+            align-self: start
+            margin-top: 55px
+        .cart
+            grid-area: 3 / 2 / 4 / 3     
+            margin-left: 50px  
+    .close_detail
+        display: flex
+        justify-content: flex-end
+        margin-top: 15px
+        margin-right: 10px  
+.detalle_card.opened
+    visibility: visible //lo pongo así para poder usar el flex
+
+
+// card para añadir o quitar productos y añadir a cesta
+
+.addToCart
+    visibility: hidden
+    position: fixed
+    z-index: 80
+    width: 400px
+    height: 300px
+    border: solid thin
+    border-radius: 10px
+    background-color: $blanco
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50% )
+    display: grid
+    grid-template-column: repeat(3, 1fr)
+    grid-template-rows: repeat(5, 1fr)  
+    .prod_name
+        margin-top: 50px
+        font-size: 1.5em
+        grid-area: 1 / 1 / 2 / 2
+        align-self: start
+    .serieadd
+        grid-area: 1 / 2 / 2 / 3
+        margin-top: 50px
+        justify-content: left 
+        align-self: start
+        justify-self: end
+    .close_add
+        grid-area: 1 / 2 / 2 / 3
+        align-self: start
+        justify-self: end
+    .menos_mas
+        grid-area: 2 / 1 / 3 / 3
+        display: flex
+        justify-content: space-between  
+        border-top: solid thin
+        .cantidad
+            display: flex
+            justify-content: center
+            align-items: center
+            border: solid thin
+            margin: 30px
+            border-radius: 50%
+            width: 100px
+            height: 100px
+        .menos
+            margin-left: 30px
+        .mas
+            margin-right: 30px
+    .price_add
+        font-size: 1.5em
+        margin-top: 3px
+        margin-bottom: 0
+    .add_cart
+        font-size: 30px
+        align-self: start
+        justify-self: end
+
+.addToCart.opened
+    visibility: visible
+    padding: 15px

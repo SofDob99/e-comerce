@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FZE SHOOP</title>
+	<link rel="stylesheet" href="./assets/css/style.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.8.55/css/materialdesignicons.min.css">
+	<script src="https://kit.fontawesome.com/f49f75a155.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<div class="addToCart">
+		<h2 class="prod_name" id="CartProdName"></h2>
+		<button class="close_add"><i class="fa-solid fa-xmark"></i></button>
+		<h4 class="serieadd" id="CartNumeSerie"></h4>
+		<div class="menos_mas">
+			<button class="menos"><i class="fa-solid fa-minus"></i></button>
+			<h1 class="cantidad">1</h1> <!--Esto tiene que sumar o restar con los btn de más o menos-->
+			<button class="mas"><i class="fa-solid fa-plus"></i></button>
+		</div>
+		<h4 class="price_add">679€</h4> <!--Esto tiene que cambiar cuando la cantidad de producto suba-->
+		<button class="add_cart"><i class="fa-solid fa-cart-plus"></i></button>
+	</div>
+	<div class="detalle_card" id="detalleCard"> <!--Hacer que se habra en cada imagen una card distinta =) -->
+		<img class="img_detalle" src="" alt="" id="detalleCardImage">
+		<div class="info" id="detalleCardInfo">
+			<h2 class="nombre_producto"></h2>
+			<h4 class="serie"></h4>
+			<p class="desc_prod"></p>
+			<h1 class="price"></h1>
+		</div>
+		<input type="hidden" id="NumeroSerie" value="">
+		<button class="cart"><svg xmlns="http://www.w3.org/2000/svg" height="40" width="40"
+				viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+				<path
+					d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM252 160c0 11 9 20 20 20h44v44c0 11 9 20 20 20s20-9 20-20V180h44c11 0 20-9 20-20s-9-20-20-20H356V96c0-11-9-20-20-20s-20 9-20 20v44H272c-11 0-20 9-20 20z" />
+			</svg></button>
+		<button class="close_detail"><i class="fa-solid fa-xmark"></i></button>
+	</div>
+
+	<section class="carro_btn">
+		<button class="carro"><i class="fa-solid fa-cart-shopping"></i></button>
+		<p class="count">0</p>
+	</section>
+	<section class="carro_lista">
+		<div class="item_close">
+			<button class="carro"><i class="fa-solid fa-cart-shopping"></i></button>
+			<button class="close"><i class="fa-solid fa-xmark"></i></button>
+		</div>
+		<div class="compra">
+			<div class="num_serie">
+				<h4>Nº9485894</h4>
+			</div>
+			<div class="precio">
+				<h4>948€</h4>
+			</div>
+		</div>
+		<div class="compra">
+			<div class="num_serie">
+				<h4>Nº9485894</h4>
+			</div>
+			<div class="precio">
+				<h4>948€</h4>
+			</div>
+		</div>
+	</section>
+	<header class="header">
+		<img src="/assets/images/logo fze-02.svg" alt="" class="logo">
+		<nav>
+			<ul class="menu">
+				<li class="menu_item">Perfil</li>
+				<li class="menu_item">Ajustes</li>
+				<li class="menu_item">Acerca de</li>
+				<i class="fa-regular fa-circle"></i> <!--esto es decoración-->
+			</ul>
+		</nav>
+	</header>
+	<main class="carusell">
+		<img id="caja" src="assets/images/img0.png" alt="Main picture">
+		<div class="controler">
+			<button id="izquierda"><i class="fa-solid fa-arrow-left"></i></button>
+			<section class="caja_mini">
+				<img class="mini" src="assets/images/img0.png" alt="picture1" data-num="0" tabindex="0">
+				<img class="mini" src="assets/images/img1.png" alt="picture2" data-num="1" tabindex="0">
+				<img class="mini" src="assets/images/img2.png" alt="picture3" data-num="2" tabindex="0">
+				<img class="mini" src="assets/images/img3.png" alt="picture4" data-num="3" tabindex="0">
+				<img class="mini" src="assets/images/img4.png" alt="picture5" data-num="4" tabindex="0">
+				<img class="mini" src="assets/images/img5.png" alt="picture6" data-num="5" tabindex="0">
+				<img class="mini" src="assets/images/img6.png" alt="picture7" data-num="6" tabindex="0">
+				<img class="mini" src="assets/images/img7.png" alt="picture8" data-num="7" tabindex="0">
+			</section>
+			<button id="derecha"><i class="fa-solid fa-arrow-right"></i></button>
+		</div>
+	</main>
+	<main class="contenedor">
+		<aside class="textfze">
+			<i class="fa-regular fa-circle"></i>
+			<p class="text1">In the vibrant realm of tomorrow
+				a harmonious convergence of technology
+				and artistry births a new era.
+				Behold, the ethereal world
+				of skin trade for robots—a symphony
+				of innovation and aesthetics.
+				Adorned in luminescent hues and
+				intricate designs, these metallic
+				beings transcend mere functionality.
+				Each purchase fosters boundless
+				creativity, supporting artists
+				and engineers alike.
+				In this utopia, diversity thrives
+				as individuals express their unique
+				visions through customizable shells.
+				A marketplace of dreams, where
+				craftsmanship meets digital prowess,
+				redefining beauty in the mesmerizing
+				glow of robotic skins.
+			</p>
+		</aside>
+		<section class="galeriaMain">
+			<h1 class="categoria"> Human Face </h1>
+
+			<section class="galeria">
+				<div class="tarjeta" data-id="239934">
+					<img class="imags" src="/assets/images/img14.png" alt="">
+					<h3 class="numero_serie">Nº239934</h3>
+
+				</div>
+				<div class="tarjeta" data-id="857634">
+					<img class="imags" src="/assets/images/img1.png" alt="">
+					<h3 class="numero_serie">Nº857634</h3>
+
+				</div>
+				<div class="tarjeta" data-id="Human 3d front">
+					<img class="imags" src="/assets/images/img2.png" alt="">
+					<h3 class="numero_serie">Nº2940024</h3>
+
+				</div>
+				<div class="tarjeta" data-id="Human skin">
+					<img class="imags" src="/assets/images/img13.png" alt="">
+					<h3 class="numero_serie">Nº98523</h3>
+
+				</div>
+				<div class="tarjeta" data-id="Skin face">
+					<img class="imags" src="/assets/images/img3.png" alt="">
+					<h3 class="numero_serie">Nº55223</h3>
+
+				</div>
+				<div class="tarjeta" data-id="Woman skin">
+					<img class="imags" src="/assets/images/img7.png" alt="">
+					<h3 class="numero_serie">Nº9191</h3>
+
+				</div>
+				<div class="tarjeta" data-id="Old skin">
+					<img class="imags" src="/assets/images/img6.png" alt="">
+					<h3 class="numero_serie">Nº263749</h3>
+
+				</div>
+				<div class="tarjeta" data-id="Human scan Full body">
+					<img class="imags" src="/assets/images/img10.png" alt="">
+					<h3 class="numero_serie">Nº75342</h3>
+
+				</div>
+				<div class="tarjeta" data-id="Male skin">
+					<img class="imags" src="/assets/images/img8.png" alt="">
+					<h3 class="numero_serie">Nº439575</h3>
+
+				</div>
+
+			</section>
+
+		</section>
+
+	</main>
+
+
+	<footer class="pie"></footer>
+
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script src="/app/main.js"></script>
+</body>
+
+</html>
